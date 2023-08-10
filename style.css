@@ -1,0 +1,341 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* altura minima altura da tela do usuario
+    issso vai deixar o rodapé sempre la em baixo */
+    min-height: 100vh;
+    position: relative;
+}
+
+/* tag principal vai etsar no index e no inicio das outras paginas */
+main {
+    margin-bottom: 250px;
+
+}
+
+/* Navbar */
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 9.5%;
+    
+}
+
+#logo img {
+    width: 50px;
+    border-radius: 25px;
+}
+
+  /* alinhar o centro
+tanto na altura como também na horizontal */
+#navbar {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgb(0, 0, 0);
+    padding: 20px;
+    text-transform: uppercase;
+    list-style: none;
+    transition: .5s;
+}
+
+#navbar li {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+
+
+/* hover evento de quando tu passa o mouse por cima do elemento */
+#navbar .nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+    font-size: 14px;
+    
+}
+
+
+#navbar .nav-link:hover {
+    color: #999;
+    
+}
+
+
+
+/* home */
+
+#title-container {
+    min-width: 500px;
+    text-align: center;
+    margin-top: 20px;
+    
+    
+}
+#title-container h1 {
+    min-width: 400px;
+   
+
+}
+#title-container p {
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: rgb(27, 23, 23);
+    
+
+}
+
+#posts-container  {
+   max-width: 1200px;
+   margin: 0 auto;
+   margin-top: 30px;
+   display: flex;
+   flex-wrap: wrap;
+
+}
+
+.post-box:first-child {
+    min-width: 100%;
+}
+
+.post-box {
+    flex: 1 1 0;
+    margin: 0 1%;
+    margin-bottom: 20px;
+}
+
+.post-box img {
+    width: 100%;
+}
+
+
+.post-box .post-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.post-box .post-title a{
+    color: black;
+    transition: .5s;
+}
+
+/* pagina do contato */
+
+/* form {
+    min-width: 500px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+} */
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+  
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+    /* height: -80%; ou qualquer outra altura desejada */
+
+}
+
+  input[type="submit"] {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .content-title-contato {
+      min-width: 500px;
+      text-align: center;
+      margin-top: 10px;
+       
+  
+  }
+
+  /* .parent-container {
+    display: flex;
+    align-items: center;
+  } */
+
+/* post */
+/* deiaxr os espacos entre eles */
+#post-container {
+    
+    display: grid; 
+    grid-template-columns: 75% 25%;
+    grid-template-columns: auto;
+    grid-template-areas: "main sidebar";
+    grid-gap: 100px;
+    padding-top: 30px;
+    margin: 0 auto;
+    margin-bottom: 250px;
+
+}
+
+
+.content-container {
+    grid-area: main;
+}
+
+#main-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#post-description {
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.post-content {
+
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.img-container {
+    margin-bottom: 30px;
+
+}
+
+.img-container img {
+    width: 55%;
+}
+
+/* POST ASIDE*/
+
+.nav-container {
+    grid-area: sidebar;
+
+}
+
+#tags-title, #categories-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    font-weight: 300;
+
+}
+#tag-list, #categories-list {
+    list-style: none;
+
+}
+#tag-list li, #categories-list li {
+   margin-bottom: 10px;
+
+}
+#tag-list a, #categories-list a {
+   color: #665;
+   transition: .5s;
+}
+#tag-title a:hover, #categories-list a:hover {
+   color: #000;
+}
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* MOBILE quando ele for menor que 480 pixels nao vamos criar alguns estilos que iram 
+sobressair os demais estilos da pagina */
+@media(max-width: 480px) {
+
+/* HOME */
+header {
+    width: 100%;
+    
+
+}
+
+#logo {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    width: 50px;
+
+}
+#navbar {
+    display: none;
+}
+
+#title-container  {
+    min-width: 100%;
+    margin-top: 10px;
+    
+}
+#posts-container {
+    margin-top: 20px;
+
+  
+}
+.post-box {
+    flex: 100% 1 0;
+    padding: 15px;
+    margin: 0;
+}
+
+}
